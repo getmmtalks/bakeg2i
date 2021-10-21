@@ -8,7 +8,7 @@
 <div class="row">
     <aside class="column">
         <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
+            <h4 class="heading"><?= __('Ações') ?></h4>
             <?= $this->Form->postLink(
                 __('Delete'),
                 ['action' => 'delete', $veiculo->id],
@@ -21,15 +21,14 @@
         <div class="veiculos form content">
             <?= $this->Form->create($veiculo) ?>
             <fieldset>
-                <legend><?= __('Edit Veiculo') ?></legend>
+                <legend><?= __('Editar Veículo') ?></legend>
                 <?php
                     echo $this->Form->control('nome');
                     echo $this->Form->control('marca_id', ['options' => $marcas]);
                     echo $this->Form->control('ano');
-                    echo $this->Form->control('deleted', ['empty' => true]);
                 ?>
             </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
+            <?= $this->Form->button(__('Salvar')) ?>
             <?= $this->Form->end() ?>
         </div>
     </div>
