@@ -73,6 +73,14 @@ $routes->scope('/', function (RouteBuilder $builder) {
     $builder->fallbacks();
 });
 
+$routes->scope('/api', function (RouteBuilder $builder) {
+
+    $builder->get('/listar-marcas', 'API::listarMarcas');
+    $builder->get('/listar-anos', 'API::listarAnos');
+    $builder->get('/buscar-veiculos', 'API::buscarVeiculos');
+
+});
+
 /*
  * If you need a different set of middleware or none at all,
  * open new scope and define routes there.

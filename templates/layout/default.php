@@ -14,7 +14,7 @@
  * @var \App\View\AppView $this
  */
 
-$cakeDescription = 'CakePHP: the rapid development php framework';
+$cakeDescription = 'Portfolio inteligente de veículos por marca.';
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,7 +25,18 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <?= $cakeDescription ?>:
         <?= $this->fetch('title') ?>
     </title>
-    <?= $this->Html->meta('icon') ?>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <meta property="og:title" content="G2iCar - Portfolio inteligente de veículos por marca">
+    <meta property="og:site_name" content="G2iCar">
+    <meta property="og:url" content="g2icar.herokuapp.com">
+    <meta property="og:description" content="Encontre os modelos de veículos que cada marca lançou, conforme o ano.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/img/logo_grande.PNG">
+
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 
@@ -38,11 +49,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <body>
     <nav class="top-nav">
         <div class="top-nav-title">
-            <a href="<?= $this->Url->build('/') ?>"><span>Cake</span>PHP</a>
+            <a href="<?= $this->Url->build('/') ?>">G2iCar</a>
         </div>
         <div class="top-nav-links">
-            <a target="_blank" rel="noopener" href="https://book.cakephp.org/4/">Documentation</a>
-            <a target="_blank" rel="noopener" href="https://api.cakephp.org/">API</a>
+            <a href="/">Pesquisar</a>
+            <a href="/veiculos">Veículos</a>
+            <a href="/marcas">Marcas</a>
         </div>
     </nav>
     <main class="main">
